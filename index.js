@@ -1,6 +1,17 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  const numbersIterated = []
+  for (const item of array) {
+    let newTarget = target - item
+    array.forEach(element => {
+      if (array.includes(newTarget)) {
+        return true
+      }
+    })
+  }
+  return false
 }
+
 
 /* 
   Write the Big O time complexity of your function here
